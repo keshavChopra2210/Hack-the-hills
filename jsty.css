@@ -17,14 +17,53 @@ body {
     --input-border-light: #ccc;
     --input-border-dark: #555;
 }
+body.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
 
-body {
-    font-family: Arial, sans-serif;
-    background: var(--background-light); /* Light gradient background */
-    color: var(--text-light);
-    margin: 0;
+/* Dark mode toggle button */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: var(--button-dark);
+}
+
+#dark-mode-toggle:hover {
+    background-color: #1b5e20;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
     padding: 20px;
-    transition: background 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .container {
+    background: #333;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
 }
 
 #home-button {
@@ -128,144 +167,187 @@ button:hover {
 #save-prompts:hover {
     background-color: #1b5e20; /* Darker shade on hover */
 }
-
-/* Dark Mode Styles */
 body.dark-mode {
-    background: var(--background-dark); /* Dark gradient background */
+    background: var(--background-dark);
     color: var(--text-dark);
 }
 
-.container.dark-mode {
-    background: #1e1e1e; /* Dark background for container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    transition: background 0.3s, color 0.3s;
 }
 
-th.dark-mode {
-    background-color: #bb86fc;
+body.dark-mode .container {
+    background: #333;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-td.dark-mode {
-    background-color: #424242; /* Dark background for table cells */
+h1 {
+    text-align: center;
+    color: var(--text-light);
 }
 
-input[type="text"].dark-mode {
+body.dark-mode h1 {
+    color: var(--text-dark);
+}
+
+#home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: var(--table-header-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+body.dark-mode #home-button {
+    background-color: var(--table-header-dark);
+}
+
+#home-button:hover {
+    background-color: #1b5e20;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body.dark-mode table {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: var(--table-header-light);
+    color: white;
+    font-weight: bold;
+}
+
+body.dark-mode th {
+    background-color: var(--table-header-dark);
+}
+
+td {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode td {
+    background-color: #333;
+    color: var(--text-dark);
+}
+
+td:hover {
+    background-color: #f9f9f9;
+}
+
+body.dark-mode td:hover {
+    background-color: #444;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--table-header-light);
+    outline: none;
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #444;
+    color: var(--text-dark);
     border: 1px solid var(--input-border-dark);
-    background-color: #333; /* Dark background for input */
-    color: var(--text-dark);
 }
 
-input[type="text"].dark-mode:focus {
-    border-color: var(--table-header-dark); /* Change border color on focus */
+button {
+    padding: 10px 15px;
+    background-color: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #121212; /* Dark background for the body */
-    color: #ffffff; /* Light text color */
+button:hover {
+    background-color: #1b5e20;
 }
 
-.dark-mode .chat-container {
-    background-color: #1e1e1e; /* Darker background for chat container */
-    color: #ffffff; /* Light text color */
+#save-prompts {
+    background-color: var(--button-light);
+    margin-top: 20px;
+    width: 100%;
 }
 
-.dark-mode .chat-box {
-    background-color: #2a2a2a; /* Slightly lighter background for chat box */
+#save-prompts:hover {
+    background-color: #1b5e20;
 }
 
-.dark-mode .chat-message {
-    border-radius: 10px; /* Consistent border radius */
-    padding: 10px; /* Consistent padding */
-    margin: 10px 0; /* Consistent margin */
+body.dark-mode button {
+    background-color: var(--button-dark);
 }
 
-.dark-mode .chat-message.user {
-    background-color: #00796b; /* Teal for user messages */
-    color: #ffffff; /* White text for user messages */
-    align-self: flex-end; /* Align user messages to the right */
+body.dark-mode button:hover {
+    background-color: #3700b3;
 }
 
-.dark-mode .chat-message.bot {
-    background-color: #3a3a3a; /* Darker background for bot messages */
-    color: #ffffff; /* White text for bot messages */
-    align-self: flex-start; /* Align bot messages to the left */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
 }
 
-.dark-mode input[type="text"] {
-    background-color: #2a2a2a; /* Dark background for input */
-    color: #ffffff; /* Light text color for input */
-    border: 1px solid #444; /* Subtle border */
+body.dark-mode #dark-mode-toggle {
+    background-color: var(--button-dark);
 }
 
-.dark-mode button {
-    background-color: #00796b; /* Teal button */
-    color: white; /* White text */
+#dark-mode-toggle:hover {
+    background-color: #3700b3;
 }
-
-.dark-mode button:hover {
-    background-color: #005f5f; /* Darker teal on hover */
-}
-
-.dark-mode .dark-mode-button {
-    background-color: #00796b; /* Teal background for dark mode button */
-    color: white; /* White icon color */
-}
-
-.dark-mode .dark-mode-button:hover {
-    background-color: #005f5f; /* Darker teal on hover */
-}
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #121212; /* Dark background for the body */
-    color: #ffffff; /* Light text color */
-}
-
-.dark-mode .chat-container {
-    background-color: #1e1e1e; /* Darker background for chat container */
-    color: #ffffff; /* Light text color */
-}
-
-.dark-mode .chat-box {
-    background-color: #2a2a2a; /* Slightly lighter background for chat box */
-}
-
-.dark-mode .chat-message {
-    border-radius: 10px; /* Consistent border radius */
-    padding: 10px; /* Consistent padding */
-    margin: 10px 0; /* Consistent margin */
-}
-
-.dark-mode .chat-message.user {
-    background-color: #00796b; /* Teal for user messages */
-    color: #ffffff; /* White text for user messages */
-    align-self: flex-end; /* Align user messages to the right */
-}
-
-.dark-mode .chat-message.bot {
-    background-color: #3a3a3a; /* Darker background for bot messages */
-    color: #ffffff; /* White text for bot messages */
-    align-self: flex-start; /* Align bot messages to the left */
-}
-
-.dark-mode input[type="text"] {
-    background-color: #2a2a2a; /* Dark background for input */
-    color: #ffffff; /* Light text color for input */
-    border: 1px solid #444; /* Subtle border */
-}
-
-.dark-mode button {
-    background-color: #00796b; /* Teal button */
-    color: white; /* White text */
-}
-
-.dark-mode button:hover {
-    background-color: #005f5f; /* Darker teal on hover */
-}
-
-.dark-mode .dark-mode-button {
-    background-color: #00796b; /* Teal background for dark mode button */
-    color: white; /* White icon color */
-}
-
-.dark-mode .dark-mode-button:hover {
-    background-color: #005f5f; /* Darker teal on hover */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;    /* Distance from the top */
+    right: 20px;  /* Distance from the right */
+    padding: 10px 15px;
+    background-color: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
 }
