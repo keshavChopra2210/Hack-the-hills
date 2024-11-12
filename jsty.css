@@ -45,26 +45,6 @@ body {
     background-color: #1b5e20; /* Darker shade on hover */
 }
 
-#theme-toggle {
-    position: fixed; /* Fixed position to keep it in the top right corner */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    padding: 10px 15px;
-    background-color: var(--button-light); /* Button color */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 1000; /* Ensure it stays above other content */
-    display: flex; /* Flexbox for icon and text    display: flex; /* Flexbox for icon and text */
-    align-items: center; /* Center the icon vertically */
-}
-
-#theme-toggle svg {
-    margin-right: 5px; /* Space between the icon and text */
-    fill: white; /* Icon color */
-}
 
 .container {
     max-width: 600px;
@@ -177,15 +157,115 @@ input[type="text"].dark-mode:focus {
     border-color: var(--table-header-dark); /* Change border color on focus */
 }
 
-/* Button styles for dark mode */
-button.dark-mode {
-    background-color: var(--button-dark);
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background for the body */
+    color: #ffffff; /* Light text color */
 }
 
-button.dark-mode:hover {
-    background-color: #9c27b0; /* Darker shade on hover */
+.dark-mode .chat-container {
+    background-color: #1e1e1e; /* Darker background for chat container */
+    color: #ffffff; /* Light text color */
 }
 
-#save-prompts.dark-mode {
-    background-color: var(--button-dark); /* Different color for Save button in dark mode */
+.dark-mode .chat-box {
+    background-color: #2a2a2a; /* Slightly lighter background for chat box */
+}
+
+.dark-mode .chat-message {
+    border-radius: 10px; /* Consistent border radius */
+    padding: 10px; /* Consistent padding */
+    margin: 10px 0; /* Consistent margin */
+}
+
+.dark-mode .chat-message.user {
+    background-color: #00796b; /* Teal for user messages */
+    color: #ffffff; /* White text for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.dark-mode .chat-message.bot {
+    background-color: #3a3a3a; /* Darker background for bot messages */
+    color: #ffffff; /* White text for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.dark-mode input[type="text"] {
+    background-color: #2a2a2a; /* Dark background for input */
+    color: #ffffff; /* Light text color for input */
+    border: 1px solid #444; /* Subtle border */
+}
+
+.dark-mode button {
+    background-color: #00796b; /* Teal button */
+    color: white; /* White text */
+}
+
+.dark-mode button:hover {
+    background-color: #005f5f; /* Darker teal on hover */
+}
+
+.dark-mode .dark-mode-button {
+    background-color: #00796b; /* Teal background for dark mode button */
+    color: white; /* White icon color */
+}
+
+.dark-mode .dark-mode-button:hover {
+    background-color: #005f5f; /* Darker teal on hover */
+}
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background for the body */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode .chat-container {
+    background-color: #1e1e1e; /* Darker background for chat container */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-mode .chat-box {
+    background-color: #2a2a2a; /* Slightly lighter background for chat box */
+}
+
+.dark-mode .chat-message {
+    border-radius: 10px; /* Consistent border radius */
+    padding: 10px; /* Consistent padding */
+    margin: 10px 0; /* Consistent margin */
+}
+
+.dark-mode .chat-message.user {
+    background-color: #00796b; /* Teal for user messages */
+    color: #ffffff; /* White text for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.dark-mode .chat-message.bot {
+    background-color: #3a3a3a; /* Darker background for bot messages */
+    color: #ffffff; /* White text for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.dark-mode input[type="text"] {
+    background-color: #2a2a2a; /* Dark background for input */
+    color: #ffffff; /* Light text color for input */
+    border: 1px solid #444; /* Subtle border */
+}
+
+.dark-mode button {
+    background-color: #00796b; /* Teal button */
+    color: white; /* White text */
+}
+
+.dark-mode button:hover {
+    background-color: #005f5f; /* Darker teal on hover */
+}
+
+.dark-mode .dark-mode-button {
+    background-color: #00796b; /* Teal background for dark mode button */
+    color: white; /* White icon color */
+}
+
+.dark-mode .dark-mode-button:hover {
+    background-color: #005f5f; /* Darker teal on hover */
 }

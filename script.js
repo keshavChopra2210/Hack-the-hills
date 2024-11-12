@@ -28,12 +28,6 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     const inputs = document.querySelectorAll('input[type="text"]');
     const buttons = document.querySelectorAll('button');
 
-    // Toggle dark mode class for container and inputs
-    container.classList.toggle('dark-mode');
-    inputs.forEach(input => input.classList.toggle('dark-mode'));
-    
-    // Toggle dark mode class for buttons
-    buttons.forEach(button => button.classList.toggle('dark-mode'));
 });
 document.getElementById('home-button').addEventListener('click', function() {
         window.location.href = 'index.html'; // Change 'index.html' to your target page
