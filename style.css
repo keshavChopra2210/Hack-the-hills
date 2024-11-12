@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #a8c8e0, #e0c8e0); /* Soft blue to lavender gradient */
+    font-family: Arial, sans-serif; /* Optional: Set a font for the body */
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    position: fixed; /* Use fixed positioning */
+    top: 20px; /* Position it at the top */
+    left: 20px; /* Position it on the left */
+    cursor: pointer;
+    font-size: 30px;
+    color: #00796b; /* Teal color */
+    z-index: 1000; /* Higher z-index to ensure it appears above other elements */
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#side-nav {
+    position: fixed; /* Keep it fixed */
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #00796b; /* Teal background */
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.close-button {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#side-nav h3 {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#side-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#side-nav ul li {
+    padding: 10px 20px;
+}
+
+#side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#side-nav ul li a:hover {
+    color: #b2dfdb; /* Light teal on hover */
+}
+
+.chat-container {
+    background-color: #ffffff; /* White background for chat */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #00796b; /* Teal header */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f7f7f7; /* Light gray background */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-message.user {
+    background-color: #b2dfdb; /* Light teal for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.chat-message.bot {
+    background-color: #e0f2f1; /* Lighter teal for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    width: calc(100% - 22px); /* Full width minus padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #00796b; /* Teal button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+.hamburger-menu {
+    position: fixed; /* Use fixed positioning */
+    top: 20px; /* Position it at the top */
+    left: 20px; /* Position it on the left */
+    cursor: pointer;
+    font-size: 30px;
+    color: #00796b; /* Teal color */
+    z-index: 1000; 
+}
+#side-nav {
+    position: fixed; /* Keep it fixed */
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #00796b; /* Teal background */
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+.chat-container {
+    background-color: #ffffff; /* White background for chat */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    position: fixed; /* Fixed positioning */
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 500; /* Lower z-index to keep it behind the hamburger menu */
+}

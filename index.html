@@ -1,1 +1,28 @@
-<p></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hamburger-menu" id="menuToggle">&#9776;</div>
+    <div id="side-nav">
+        <div class="close-button" id="closeButton">&times;</div>
+        <h3>Resources</h3>
+        <ul>
+            <li><a href="#coping-mechanisms">Coping Mechanisms</a></li>
+            <li><a href="#professional-help">Find a Therapist</a></li>
+            <li><a href="#self-help">Self-Help Resources</a></li>
+        </ul>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">Mental Health Support Chatbot</div>
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="How are you feeling?" />
+        <button id="send-button">Send</button>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
