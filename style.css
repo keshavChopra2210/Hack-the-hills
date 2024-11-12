@@ -92,6 +92,8 @@ body {
     font-size: 1.5em;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
 
 .chat-box {
@@ -138,6 +140,7 @@ button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 20px;
 }
 
 button:hover {
@@ -163,7 +166,7 @@ button:hover {
     z-index: 999;
 }
 .chat-container {
-    background-color: #ffffff; /* White background for chat */
+    background-color: rgb(212, 212, 212); /* White background for chat */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -176,4 +179,37 @@ button:hover {
     flex-direction: column;
     overflow: hidden;
     z-index: 500; /* Lower z-index to keep it behind the hamburger menu */
+}
+.dark-mode {
+    background: #121212; /* Dark background */
+    color: #000000; /* Light text */
+}
+.dark-mode .chat-container {
+    background-color: gray; /* Dark background for chat */
+    color: black; /* Light text */
+}
+
+.dark-mode-button {
+    position: fixed; /* Fixed positioning */
+    top: 20px; /* Position it at the top */
+    right: 20px; /* Position it on the right */
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 24px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    color: #00796b; /* Teal color */
+    z-index: 1000; /* Higher z-index to ensure it appears above other elements */
+}
+
+.dark-mode-button:hover {
+    color: #005f5f; /* Darker teal on hover */
+}
+.dark-mode .chat-box{
+    background-color: #949494;
+}
+.dark-mode .chat-message.bot{
+    background-color: rgb(213, 164, 213);
+}
+.dark-mode .chat-message.user{
+    background-color: rgb(185, 126, 185);
 }

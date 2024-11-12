@@ -46,3 +46,24 @@ function toggleSideNav() {
         sideNav.style.left = '0px'; // Show side nav
     }
 }
+// Get references to the dark mode button and the body
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+// Check for saved user preference in localStorage
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+// Add event listener to the dark mode toggle button
+darkModeToggle.addEventListener('click', () => {
+    // Toggle the dark mode class on the body
+    body.classList.toggle('dark-mode');
+
+    // Save the user's preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+});
