@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff); /* Light gradient background */
+    margin: 0;
+    padding: 20px;
+}
+
+:root {
+    --background-light: linear-gradient(to right, #e0f7fa, #ffffff);
+    --background-dark: linear-gradient(to right, #121212, #1e1e1e);
+    --text-light: #333;
+    --text-dark: #ffffff;
+    --button-light: #3f51b5;
+    --button-dark: #bb86fc;
+    --table-header-light: #00796b;
+    --table-header-dark: #1b5e20;
+    --input-border-light: #ccc;
+    --input-border-dark: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-light); /* Light gradient background */
+    color: var(--text-light);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+#home-button {
+    position: fixed; /* Fixed position to keep it in the top left corner */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    padding: 10px 15px;
+    background-color: var(--button-light); /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+#home-button:hover {
+    background-color: #303f9f; /* Darker shade on hover */
+}
+
+#theme-toggle {
+    position: fixed; /* Fixed position to keep it in the top right corner */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    padding: 10px 15px;
+    background-color: var(--button-light); /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex; /* Flexbox for icon and text    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Center the icon vertically */
+}
+
+#theme-toggle svg {
+    margin-right: 5px; /* Space between the icon and text */
+    fill: white; /* Icon color */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Space for the fixed button */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-light);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: var(--table-header-light);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #f9f9f9; /* Light gray on hover */
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--table-header-light); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--button-light);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+#save-prompts {
+    background-color: var(--button-light); /* Different color for Save button */
+    margin-top: 20px; /* Space above the button */
+    width: 100%; /* Make it full width */
+}
+
+#save-prompts:hover {
+    background-color: #303f9f; /* Darker shade on hover */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: var(--background-dark); /* Dark gradient background */
+    color: var(--text-dark);
+}
+
+.container.dark-mode {
+    background: #1e1e1e; /* Dark background for container */
+}
+
+th.dark-mode {
+    background-color: var(--table-header-dark);
+}
+
+td.dark-mode {
+    background-color: #424242; /* Dark background for table cells */
+}
+
+input[type="text"].dark-mode {
+    border: 1px solid var(--input-border-dark);
+    background-color: #333; /* Dark background for input */
+    color: var(--text-dark);
+}
+
+input[type="text"].dark-mode:focus {
+    border-color: var(--table-header-dark); /* Change border color on focus */
+}
+
+/* Button styles for dark mode */
+button.dark-mode {
+    background-color: var(--button-dark);
+}
+
+button.dark-mode:hover {
+    background-color: #9c27b0; /* Darker shade on hover */
+}
+
+#save-prompts.dark-mode {
+    background-color: var(--button-dark); /* Different color for Save button in dark mode */
+}

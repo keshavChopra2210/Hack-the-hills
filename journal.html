@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jsty.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Activities Checklist</h1>
+        <div id="activities">
+            <ul id="activity-list">
+                <li class="activity-item">
+                    <input type="checkbox" id="activity1">
+                    <label for="activity1">Wake Up</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity2">
+                    <label for="activity2">Brushed</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity3">
+                    <label for="activity3">Bathe</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity4">
+                    <label for="activity4">Worked</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity5">
+                    <label for="activity5">Breakfast</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity6">
+                    <label for="activity5">Lunch</label>
+                </li>
+                <li class="activity-item">
+                    <input type="checkbox" id="activity7">
+                    <label for="activity5">Dinner</label>
+                </li>
+            </ul>
+        </div>
+        <button id="save-button">Save Progress</button>
+    </div>
+    <div class="container">
+        <button id="home-button">Home</button>
+        <button id="theme-toggle">Toggle Dark Mode</button> 
+        <h1>Daily Prompt List</h1>
+        <table id="prompt-table">
+            <thead>
+                <tr>
+                    <th>Prompt</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="prompt-body">
+                <tr>
+                    <td><input type="text" placeholder="Enter your prompt here"></td>
+                    <td><button class="delete-btn">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-prompt">Add Prompt</button>
+        <button id="save-prompts" style="margin-top: 20px;">Save</button> <!-- Save button added here -->
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
