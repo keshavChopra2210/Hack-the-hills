@@ -35,3 +35,6 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     // Toggle dark mode class for buttons
     buttons.forEach(button => button.classList.toggle('dark-mode'));
 });
+document.getElementById('home-button').addEventListener('click', function() {
+        window.location.href = 'index.html'; // Change 'index.html' to your target page
+    });
